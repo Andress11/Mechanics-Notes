@@ -1,0 +1,141 @@
+El problema de fuerzas centrales tiene un rol muy importante en la física debido a que muchos problemas puede ser aproximados como fuerzas centrales y pueden ser tratadas como perturbaciones de estas. Para un problema de fuerzas centrales se asume que la magnitud de la fuerza de interacción solo depende de la distancia entre las masas.
+
+\subsection[short]{Problema de dos cuerpos}
+Estableciendo las ecuaciones de movimiento para un sistema de dos cuerpos con la segunda ley de Newton se obtiene que 
+
+\begin{gather}
+    \label{eq:FC1}m_1\ddot{\mathbf{x}}_1 = \mathbf{F}\\
+    \label{eq:FC2}m_2\ddot{\mathbf{x}}_2 = -\mathbf{F}
+\end{gather}
+Multiplicando la primera ecuación por $m_2$, la segunda por $m_1$ y restando ambas ecuaciones 
+
+\begin{gather*}
+    m_1m_2 (\ddot{\mathbf{x}}_1 - \ddot{\mathbf{x}}_2) = (m_1 + m_2)\mathbf{F}
+\end{gather*}
+Si se establece el vector $\mathbf{x}$ como la distancia entre $m_1$ y $m_2$, entonces es posible reducir la dinámica del sistema de $6$ ecuaciones diferenciales (una para cada coordenada en \ref*{eq:FC1} y \ref*{eq:FC2}) a solo tres ecuaciones diferenciales dadas por
+
+\begin{gather}
+    \label{eq:FC3}\mu \ddot{\mathbf{x}} = \mathbf{F} \;\;\;\; \text{con} \;\;\;\; \mu = \frac{m_1m_2}{m_1 + m_2}
+\end{gather}
+Otra forma de interpretar esto es la reducción en la dimensión de $\mathbb{Q}$ mediante este cambio de variable. Las ecuación (\ref*{eq:FC3}) muestra que \textit{posición relativa} satisface las ecuaciones de Newton. La solución general de este problema se centra en considerar la dinámica de la masa reducida más el movimiento uniforme del centro de masa. Considerando ahora la energía cinética del sistema
+
+\begin{gather*}
+    T = \frac{1}{2}\mu\dot{x}^2 + \frac{1}{2}M\dot{X}_{cm}^2
+\end{gather*}
+En la mayoría de sistemas físicos que están gobernados por fuerzas centrales, se tiene la consideración de que $m_2 \gg m_1$, entonces el centro de masa esta muy cerca de $m_2$, por lo que la separación entre las partículas es muy proxima a la distancia entre el centro de masa a $m_1$. Por lo tanto, la energía del sistema será 
+
+\begin{gather*}
+    T = \frac{1}{2}\mu\dot{x}^2
+\end{gather*}
+Considerando las coordenadas esféricas para describir la dinámica del sistema y planteando la función lagrangiana.
+
+\begin{gather}
+    L = \frac{1}{2}\mu\left(\dot{r}^2 + r^2\dot{\theta}^2 + r^2\sin^2\theta \dot{\phi}^2\right) - V(r)
+\end{gather}
+Ahora, como desde un principio de consideró que la fuerza solo depende de la distancia entre las masas, entonces será co-lineal al vector $\mathbf{x}$, esto tendrá como consecuencia que el momento angular será constante.
+
+\begin{gather*}
+    \frac{dL}{dt} = \mathbf{x} \times \mathbf{F} = 0 
+\end{gather*}
+Dado que el momento angular es $\mathbf{L} = \mathbf{x} \times \mathbf{P}$ y es constante, entonces el plano formado por la posición y el momento lineal también será constante, es decir, el movimiento del sistema siempre estará en el mismo plano. Esto implica que en coordenadas esféricas el ángulo $\phi = \pi/2$ y $\dot{\phi} = 0$  y por tanto, la lagrangiana será 
+
+\begin{gather}
+    \label{eq:FC4}L = \frac{1}{2}\mu\left(\dot{r}^2 +  r^2\dot{\theta}^2\right) - V(r)
+\end{gather}
+Aplicando las ecuaciones de Euler-Lagrange a la función lagrangiana se obtiene una ecuación para cada coordenada generalizada 
+
+\begin{gather}
+    \label{eq:FC5}\mu\ddot{r} - \mu r\dot{\theta}^2 + \frac{\partial V}{\partial r} = 0\\
+    \label{eq:FC6}\frac{d}{dt}\left(\mu r^2\dot{\theta}\right) = 0
+\end{gather}
+La ecuación (\ref*{eq:FC6}) define una \textit{coordenada cíclica}, la cual permite desacoplar las ecuaciones diferenciales.
+
+\begin{gather*}
+    \mu r^2\dot{\theta} = l   \;\;\;\; \rightarrow \;\;\;\; \dot{\theta} = \frac{l}{\mu r^2}
+\end{gather*}
+Donde $l$ es una constante y será la magnitud del momento angular. Remplazando en la ecuación (\ref*{eq:FC5}) se obtiene
+
+\begin{gather}
+    \label{eq:FC7}\mu\ddot{r} - \frac{l^2}{\mu r^3} + \frac{\partial V}{\partial r} = 0
+\end{gather}
+Esto se puede interpretar como el movimiento de un sistema de masa $\mu$ bajo el efecto de una fuerza efectiva $\mathcal{F}(r)$ que proviene de un potencial efectivo $\mathcal{V}(r)$.
+
+\begin{gather*}
+    \mathcal{F}(r) = \frac{l^2}{\mu r^3} - \frac{\partial V}{\partial r} = - \nabla \mathcal{V}(r)
+\end{gather*}
+Esto permite establecer que el potencial debe ser 
+
+\begin{gather}
+    \mathcal{V}(r) = \frac{l^2}{2\mu r^2} + V(r)
+\end{gather}
+Y entonces se establece una nueva función lagrangiana de un sistema equivalente al de una partícula de una dimensión.
+
+\begin{gather*}
+    \mathcal{L} = \frac{1}{2}\mu\dot{r}^2 - \mathcal{V}(r)
+\end{gather*}
+Dado que $\mathcal{L}$ tiene la forma $\mathcal{L} = T - \mathcal{V}$, entonces la energía se puede escribir como 
+
+\begin{gather*}
+    E = T + \mathcal{V} = \frac{1}{2}\mu\dot{r}^2 + \frac{l^2}{2\mu r^2} + V(r)
+\end{gather*}
+
+\subsection{El Problema de Kepler}
+
+El problema de Kepler se centra el estudio de un problema de dos cuerpos bajo el efecto de un potencial con la forma 
+
+\begin{gather}
+    V(r) = -\frac{\alpha}{r} \;\;\; \text{con} \;\;\; \alpha = G\mu M
+\end{gather}
+Parametrizando la trayectoria $r$ en función de $\theta$ (es decir pasara de $r(t)$ a $r(\theta)$) se hace necesario redefinir la derivada temporal bajo la siguiente sustitución.
+
+\begin{gather}
+    \frac{d}{dt} = \frac{\theta}{dt}\frac{d}{d \theta} = \frac{l}{\mu r^2}\frac{d}{d \theta}\\
+    \frac{d^2}{dt^2} = \frac{d}{dt}\left(\frac{l}{\mu r^2}\frac{d}{d \theta}\right) = \frac{l}{\mu r^2}\frac{d}{d \theta}\left(\frac{l}{\mu r^2}\frac{d}{d \theta}\right) = \frac{l^2}{\mu^2 r^2}\frac{d}{d\theta}\left(\frac{1}{r^2}\frac{d}{d \theta}\right)
+\end{gather}
+Remplazando en la ecuación (\ref*{eq:FC7}) se obtiene
+
+\begin{gather*}
+    \frac{l^2}{\mu r^2}\frac{d}{d\theta}\left(\frac{1}{r^2}\frac{dr}{d \theta}\right) - \frac{l^2}{\mu r^3} + \frac{\alpha}{r^2} = 0
+\end{gather*}
+Planteando el cambio de variable $u = 1/r$ y $du = -1/r^2 d\theta$
+
+\begin{gather*}
+    -\frac{l^2}{\mu}\frac{d^2u}{d\theta^2} - \frac{l^2u^3}{\mu} + \alpha u^2 = 0
+\end{gather*}
+Simplificando la expresión se obtiene entonces la ecuación diferencial de la orbita para este caso 
+
+\begin{gather}
+    \frac{d^2u}{d\theta^2} + u = \frac{\alpha\mu}{l^2}
+\end{gather}
+Esta es una ecuación diferencial de segundo orden no homogénea cuya solución está dada por 
+
+\begin{gather*}
+    u = A\cos(\theta + \delta) + \frac{\alpha \mu}{l^2}
+\end{gather*}
+Esta ecuación se puede expresar en términos de nuevas constantes para que tenga la forma de la ecuación de orbita en coordenadas polares
+
+\begin{gather}
+    u  = \frac{1}{r} = \frac{\alpha \mu}{l^2}\left[\epsilon\cos(\theta - \theta_0) + 1\right]
+\end{gather}
+Si el parámetro $\epsilon$ es cero, entonces se considerarán orbitas circulares, debido a que $r(\theta)$ será constante para todo $\theta$. El valor máximo que puede tener $r$ corresponde a cuando $\theta$ es mínimo, es decir $\theta = \theta_0$, este punto es llamado el \textit{perihelio}.
+
+\begin{gather*}
+    r_{min} = \frac{l^2}{\alpha \mu}\frac{1}{1 + \epsilon}
+\end{gather*}
+Ahora, el valor mínimo de $r$ es cuando $\theta$ es máximo, este valor será para $\theta + \theta_0$, este punto es llamado \textit{afelio}.
+
+\begin{gather*}
+    r_{max} = \frac{l^2}{\alpha \mu}\frac{1}{1 - \epsilon}
+\end{gather*}
+Cuando $r = r_{min}$ la partícula se esta moviendo con una velocidad $v$ perpendicular con el vector posición. Su momento angular esta dado entonces por $l = r_{min}\mu v$, esto permite establecer la energía cinética
+
+\begin{gather*}
+    T = \frac{1}{2}\mu v^2 = \frac{\mu \alpha^2 (\epsilon + 1)^2}{2l^2}
+\end{gather*}
+Estableciendo entonces la energía en función del potencial y la energía cinética 
+
+\begin{gather*}
+    E = \frac{1}{2}\mu v^2 = \frac{\mu \alpha^2 (\epsilon + 1)^2}{2l^2} - \frac{\alpha}{r_{min}}\\
+    E = \frac{\alpha^2\mu}{2l^2}(\epsilon^2 - 1) 
+\end{gather*}
+Esto permite establecer una relación entre la energía y $\epsilon$. De aquí se puede concluir que $E$ es negativo si $\epsilon < 1$ (Orbitas cerradas), es cero si $\epsilon = 0$ (Orbitas parabólicas) y es positiva si $\epsilon > 1$  (Orbitas hiperbólicas).

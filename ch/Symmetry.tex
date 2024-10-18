@@ -1,0 +1,19 @@
+Una de las ideas más importantes obtenidas a partir del formalismo de Lagrange es la relación de las leyes de conservación con las simetrías. Se dice que un sistema es \textit{Simétrico} si bajo un sistema de transformaciones el sistema permanece invariante. 
+
+\subsection[short]{Coordenadas cíclicas}
+
+Cuando una coordenada generalizada no aparece de forma implícita dentro de las ecuaciones de Euler-Lagrange entonces se dice que es una $\textit{coordenada cíclica}$, por tanto, dará lugar a una constante de movimiento en el sistema. Un ejemplo, si $q^{\beta}$ no aparece dentro de la función Lagrangiana, entonces la cantidad conservada está dada por
+
+\begin{gather*}
+    \frac{d}{dt}\frac{\partial L}{\partial \dot{q}^{\beta}} = 0
+\end{gather*}
+
+Esto implica que $\partial L/ \partial \dot{q}^\beta$ será constante en el tiempo y se le da el nombre de momento conjugado generalizado $p_\beta$. Si $q^{\beta}$ es una coordenada cíclica entonces $p_\beta$ da un conjunto de sub-conjunto (sub-manifold) en $\mathbf{T}\mathbb{Q}$. Es decir, si el punto de fase inicial se encuentra en cualquier sub-conjunto cuya ecuación esta dada por $p_\beta = C$, el movimiento permanecerá en este. Todo esto implica que ahora el conjunto que contiene las ecuaciones de Euler-Lagrange es el sub-conjunto de $\mathbf{T}\mathbb{Q}$ cuya dimension  es $2n - 1$, es decir, la dimensión del colector de fase es reducida por las coordenadas cíclicas.
+
+\subsection[short]{Transformaciones: Pasivas y Activas}
+
+Considere una familia de transformaciones en $\mathbb{Q}$ que solo desplaza la coordenada ignorable $q^{\lambda}$ en una cantidad variable $\epsilon$. Estas transformaciones en $\mathbb{Q}$ implican otras en $\mathbf{T}\mathbb{Q}$, llamando las coordenadas transformadas como ($Q$, $\dot{Q}$), las transformaciones entre coordenadas estarán dadas por.
+
+\begin{align*}
+    Q^{\alpha} = q^{\alpha} + \epsilon\delta^{\alpha\lambda} && \dot{Q}^{\alpha} = \dot{q}^{\alpha}
+\end{align*}

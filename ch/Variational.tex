@@ -1,0 +1,184 @@
+Las ecuaciones de movimiento descritas con anterioridad se pueden demostrar desde un punto variacional. De todos las posibles trayectorias descritas por las funciones $q(t)$, el movimiento físico real se da cuando la acción $S$ es mínima. La acción asociada a un movimiento descrito por una función $q(t)$ en un intervalo de tiempo ($t_0, t_1$) esta dada por
+
+\begin{gather*}
+    S(q,t_0,t_1) = \int_{t_0}^{t_1} L(q,\dot{q},t)dt
+\end{gather*}
+
+Donde $S$ depende de la trayectorias $q(t)$, por tanto, $S$ es un funcional de $q(t)$. Este análisis se centra solo en trayectorias que inician y terminan en los mismos dos puntos en $\mathbb{Q}$, es decir $q(t_0,a) = q(t_0,b) = q(t_0)$ y $q(t_1,a) = q(t_1,b) = q(t_1)$. Las funciones $q(t,a)$ y $q(t,b)$ coinciden en los puntos extremos pero pueden no coincidir entre ellas, esto significa que pueden existir muchas funciones para $q$ y cada una de ellas tiene asociado un valor de $S$. Entonces el problema físico se centra en encontrar la trayectoria $q(t)$ que toma el sistema en el viaje de $q(t_0)$ a $q(t_1)$. 
+
+\subsection[short]{Principio de Hamilton}
+
+
+El principio de Hamilton establece que en una familia de de muchas trayectorias $q(t,\epsilon)$ que comienzan en $q(t_0)$ y terminan en $q(t_1)$ y que contengan a la trayectoria física. La trayectoria física será aquella para la cual $S$ sea mínima.  Considerando trayectorias parametrizadas por $\epsilon$, las cuales sean continuas y diferenciables, todos los cálculos dependerán de $\epsilon$ sólo a través de las derivadas, por lo que $\epsilon$ puede cambiarse sin pérdida de generalidad. En general, lo que afirma el principio de Hamilton es que la trayectoria física produce el mínimo S de cada familia en la que puede incluirse. Matemáticamente esto puede escribir como 
+
+\begin{gather*}
+    \frac{dS}{d\epsilon}_{\epsilon = 0} = \left[\frac{d}{d\epsilon} \int_{t_0}^{t_1} L(q,\dot{q},t)dt\right]_{\epsilon = 0} = 0
+\end{gather*}
+
+Cambiando la notación se establece $d/d\epsilon_{\epsilon  = 0}$ como $\delta$.
+
+\begin{gather*}
+    \delta S = \delta \int_{t_0}^{t_1} L(q,\dot{q},t)dt = 0
+\end{gather*}
+
+Recordando que toda la expresión debe evaluarse en $\epsilon = 0$, ahora como $L$ depende de $q^{\alpha}$ y $\dot{q}^{\alpha}$ entonces también depende de forma no explicita de $\epsilon$.
+
+\begin{gather*}
+    \delta S = \int_{t_0}^{t_1} \delta L(q,\dot{q},t)dt = 0\\
+    \delta L = \frac{\partial L}{\partial q^{\alpha}}\delta q^{\alpha} + \frac{\partial L}{\partial \dot{q}^{\alpha}}\delta \dot{q}^{\alpha}
+\end{gather*}
+
+Tomando el segundo término de la parte derecha, y dado que las derivadas son continuas y diferenciables, entonces se puede intercambiar el orden de las en el que se deriva $q^{\alpha}$.
+
+\begin{gather*}
+    \frac{\partial L}{\partial \dot{q}^{\alpha}}\delta \dot{q}^{\alpha} = \frac{\partial L}{\partial \dot{q}^{\alpha}}\frac{d}{dt}\delta q^{\alpha} 
+\end{gather*}
+
+Esta ultima ecuación se puede expresar en términos de la derivada de un producto 
+
+\begin{gather*}
+    \frac{d}{dt}\left[\frac{\partial L}{\partial \dot{q}^{\alpha}}\delta q^{\alpha}\right] = \frac{d}{dt}\left[\frac{\partial L}{\partial \dot{q}^{\alpha}} \right]\delta q^{\alpha} + \frac{\partial L}{\partial \dot{q}^{\alpha}}\frac{d}{dt}\delta q^{\alpha}\\
+    \frac{\partial L}{\partial \dot{q}^{\alpha}}\frac{d}{dt}\delta q^{\alpha} = \frac{d}{dt}\left[\frac{\partial L}{\partial \dot{q}^{\alpha}}\delta q^{\alpha}\right] - \frac{d}{dt}\left[\frac{\partial L}{\partial \dot{q}^{\alpha}} \right]\delta q^{\alpha}
+\end{gather*}
+
+Entonces el variacional de la Lagrangiana será 
+
+\begin{gather*}
+    \delta L = \frac{\partial L}{\partial q^{\alpha}}\delta q^{\alpha} +  \frac{d}{dt}\left[\frac{\partial L}{\partial \dot{q}^{\alpha}}\delta q^{\alpha}\right] - \frac{d}{dt}\left[\frac{\partial L}{\partial \dot{q}^{\alpha}} \right]\delta q^{\alpha}\\
+    \delta L =  \left[ \frac{\partial L}{\partial q^{\alpha}}- \frac{d}{dt}\frac{\partial L}{\partial \dot{q}^{\alpha}} \right]\delta q^{\alpha} + \frac{d}{dt}\left[\frac{\partial L}{\partial \dot{q}^{\alpha}}\delta q^{\alpha}\right] 
+\end{gather*}
+
+Remplazando en la integral de la acción se obtiene 
+
+\begin{gather*}
+    \delta S = \int_{t_0}^{t_1} \left[ \frac{\partial L}{\partial q^{\alpha}}- \frac{d}{dt}\frac{\partial L}{\partial \dot{q}^{\alpha}} \right]\delta q^{\alpha}dt + \int_{t_0}^{t_1}\frac{d}{dt}\left[\frac{\partial L}{\partial \dot{q}^{\alpha}}\delta q^{\alpha}\right]dt = 0\\
+    \delta S = \int_{t_0}^{t_1} \left[ \frac{\partial L}{\partial q^{\alpha}}- \frac{d}{dt}\frac{\partial L}{\partial \dot{q}^{\alpha}} \right]\delta q^{\alpha}dt + \left[\frac{\partial L}{\partial \dot{q}^{\alpha}}\delta q^{\alpha}\right]_{t_0}^{t_1} = 0\\
+\end{gather*}
+
+Como en los puntos extremos la variación de las trayectorias vale cero, esto implica que 
+
+\begin{gather*}
+    \left[\frac{\partial L}{\partial \dot{q}^{\alpha}}\delta q^{\alpha}\right]_{t_0}^{t_1} = 0
+\end{gather*}
+
+Por lo tanto, la variación de la acción será 
+
+\begin{gather*}
+    \delta S = \int_{t_0}^{t_1} \left[ \frac{\partial L}{\partial q^{\alpha}}- \frac{d}{dt}\frac{\partial L}{\partial \dot{q}^{\alpha}} \right]\delta q^{\alpha}dt = 0
+\end{gather*}
+
+Realizando la sustitución 
+
+\begin{gather}
+    \label{eq:sEL}\Lambda_\alpha =  \left[ \frac{\partial L}{\partial q^{\alpha}}- \frac{d}{dt}\frac{\partial L}{\partial \dot{q}^{\alpha}} \right]
+\end{gather}
+
+\begin{gather*}
+    \delta S = \int_{t_0}^{t_1} \Lambda_{\alpha}\delta q^{\alpha}dt = 0
+\end{gather*}
+
+
+Para un set de $n$ funciones $f_{\alpha}$ de variables reales e integrables en un intervalo $I$.
+
+\begin{gather*}
+    \int_I f_{\alpha}h_{\alpha}dt = 0
+\end{gather*}
+
+Para un set de funciones integrales $h_{\alpha}$ integrable en el mismo intervalo, las cuales se hacen cero en los puntos extremos, entonces $f_{\alpha}$ será cero para todo $\alpha$. El principio de Hamilton se aplica para cualquier familia de trayectorias $\epsilon$ y $\delta q^{\alpha}$ es un set de funciones arbitrarias que depende de $t$, que se hacen cero en los puntos iniciales y finales tal como lo hace $h_\alpha$. Esto permite establecer que $\Lambda_\alpha$ debe ser cero para todo $\alpha$. Esto permite entonces finalmente establecer que la trayectoria que minimiza la acción será la que la que cumpla las ecuaciones de Euler-Lagrange.
+
+\begin{gather}
+    \label{eq:vEL}\Lambda_\alpha =  \frac{\partial L}{\partial q^{\alpha}}- \frac{d}{dt}\frac{\partial L}{\partial \dot{q}^{\alpha}} = 0
+\end{gather}
+
+La ecuación (\ref*{eq:sEL}) se puede interpretar como el producto punto entre dos vectores expresados como funciones, esto permite concluir que el producto punto entre $\Lambda$ y $\delta q^{\alpha}$ es cero, y por tanto, estos vectores son ortogonales entre si, esto se puede expresar matemáticamente como
+
+\begin{gather}
+    \left(\Lambda, \delta q \right) = 0
+\end{gather}
+
+
+
+\subsection[short]{Ligaduras}
+
+Ahora se aplicará el principio variacional para describir la dinámica de un sistema sometido a ligaduras. Entonces, se supone un sistema que está sujeto a $K < n$ ligaduras no holonomas independientes que tiene la forma
+
+\begin{gather}
+    \label{eq:Lig}f_I(q,\dot{q},t) = 0 \;\;\; \text{con} \;\;\; I = 1,2,\dots, K.
+\end{gather}
+
+Aplicando el método variacional con la condición de las trayectorias parametrizadas por $\epsilon$ tienen que satisfacer las ligaduras impuestas. Comenzando con la ecuación (\ref*{eq:vEL}), con la excepción de que ahora $\delta q \in \mathbb{F}$, cuyas componentes ahora no son arbitrarias, sino que están dadas por las ligaduras. Esto significa entonces que $\Lambda$ será ortogonal al sub espacio  $\mathbb{F}_q \in \mathbb{F}$. Entonces para encontrar $\Lambda$ se debe encontrar una expresión para $\mathbb{F}_q$, aplicando el principio variacional sobre $f_I$.
+
+\begin{gather*}
+    \frac{\partial f_I}{\partial \epsilon} = \frac{\partial f_I}{\partial q^{\alpha}}\frac{\partial q^{\alpha}}{\partial \epsilon} + \frac{\partial f_I}{\partial \dot{q}^{\alpha}}\frac{\partial \dot{q}^{\alpha}}{\partial \epsilon} = 0
+\end{gather*}
+
+Ahora multiplique cada una de estas ecuaciones por una función arbitraria suficientemente bien comportada $\mu_1(t)$ y sumando sobre $I$
+
+\begin{gather*}
+    \int_{t_0}^{t_1} \sum_I \left[\mu_I \frac{\partial f_I}{\partial q^{\alpha}}\frac{\partial q^{\alpha}}{\partial \epsilon} + \mu_I \frac{\partial f_I}{\partial \dot{q}^{\alpha}}\frac{\partial \dot{q}^{\alpha}}{\partial \epsilon} \right]dt = 0\\
+\end{gather*}
+
+Tomando el segundo termino del argumento en la integral
+
+\begin{gather*}
+    \frac{\partial f_I}{\partial \dot{q}^{\alpha}}\frac{\partial \dot{q}^{\alpha}}{\partial \epsilon} =  \frac{\partial f_I}{\partial \dot{q}^{\alpha}}\frac{d}{dt}\frac{\partial q^{\alpha}}{\partial \epsilon}\\
+    \frac{d}{dt}\left[\frac{\partial f_I}{\partial \dot{q}^{\alpha}}\frac{\partial q^{\alpha}}{\partial \epsilon}\right] = \frac{d}{dt}\left[\frac{\partial f_I}{\partial \dot{q}^{\alpha}}\right]\frac{\partial q^{\alpha}}{\partial \epsilon} + \frac{\partial f_I}{\partial \dot{q}^{\alpha}}\frac{d}{dt}\frac{\partial q^{\alpha}}{\partial \epsilon}\\
+    \frac{\partial f_I}{\partial \dot{q}^{\alpha}}\frac{\partial \dot{q}^{\alpha}}{\partial \epsilon} = \frac{d}{dt}\left[\frac{\partial f_I}{\partial \dot{q}^{\alpha}}\frac{\partial q^{\alpha}}{\partial \epsilon}\right] - \frac{d}{dt}\left[\frac{\partial f_I}{\partial \dot{q}^{\alpha}}\right]\frac{\partial q^{\alpha}}{\partial \epsilon}
+\end{gather*}
+
+Remplazando 
+
+\begin{gather*}
+    \int_{t_0}^{t_1} \sum_I \left[\mu_I \frac{\partial f_I}{\partial q^{\alpha}}\frac{\partial q^{\alpha}}{\partial \epsilon} + \mu_I \frac{d}{dt}\left[\frac{\partial f_I}{\partial \dot{q}^{\alpha}}\frac{\partial q^{\alpha}}{\partial \epsilon}\right] - \mu_I \frac{d}{dt}\left[\frac{\partial f_I}{\partial \dot{q}^{\alpha}}\right]\frac{\partial q^{\alpha}}{\partial \epsilon}  \right]dt = 0\\
+    \int_{t_0}^{t_1} \sum_I \mu_I \left[\frac{\partial f_I}{\partial q^{\alpha}} - \frac{d}{dt}\frac{\partial f_I}{\partial \dot{q}^{\alpha}}\right]\frac{\partial q^{\alpha}}{\partial \epsilon}dt + \int_{t_0}^{t_1} \sum_I \mu_I  \frac{d}{dt}\left[\frac{\partial f_I}{\partial \dot{q}^{\alpha}}\frac{\partial q^{\alpha}}{\partial \epsilon}\right]dt = 0\\
+    \int_{t_0}^{t_1} \sum_I \mu_I \left[\frac{\partial f_I}{\partial q^{\alpha}} - \frac{d}{dt}\frac{\partial f_I}{\partial \dot{q}^{\alpha}}\right]\frac{\partial q^{\alpha}}{\partial \epsilon}dt +   \left[\frac{\partial f_I}{\partial \dot{q}^{\alpha}}\frac{\partial q^{\alpha}}{\partial \epsilon}\right]_{t_0}^{t_1} = 0
+\end{gather*}
+
+Pero como $\frac{\partial q^{\alpha}}{\partial \epsilon}$ es cero en los puntos extremos entonces se obtiene la ecuación
+
+\begin{gather*}
+    \int_{t_0}^{t_1} \sum_I \mu_I \left[\frac{\partial f_I}{\partial q^{\alpha}} - \frac{d}{dt}\frac{\partial f_I}{\partial \dot{q}^{\alpha}}\right]\frac{\partial q^{\alpha}}{\partial \epsilon}dt = 0\\
+    \int_{t_0}^{t_1} \sum_I \mu_I \left[\frac{\partial f_I}{\partial q^{\alpha}} - \frac{d}{dt}\frac{\partial f_I}{\partial \dot{q}^{\alpha}}\right]\delta q^{\alpha}dt = 0\\
+    \int_{t_0}^{t_1} \sum_I  \chi_I \delta q^{\alpha}dt = 0
+\end{gather*}
+
+Entonces como se vio antes, para que esto se cumpla se impone que $\sum_I  \chi_I = 0$, esto implica que el producto punto entre estos vectores es cero y por tanto son ortogonales entre ellos.
+
+\begin{gather}
+    \left(\sum_I \chi_I , \delta q \right) = 0
+\end{gather}
+
+Esto establece todas las restricciones sobre los vectores $\delta q$, estas serán ortogonales a todos los vectores $\chi_i$ posibles. Vectorialmente $\mathbb{F}_q$ (que es el sub-espacio que contiene todos los vectores $\delta q$) es ortogonal al sub-espacio $\mathbb{F}_\chi$. Dado que $\Lambda$ es ortogonal a $\mathbb{F}_q$ entonces debe estar contenido en $\mathbb{F}_\chi$, esto significa que $\Lambda$ puede ser expresada como una combinación lineal $\Lambda = \sum \alpha_I \chi_I$, esto permite establecer la siguiente expresión 
+
+\begin{gather}
+    \label{eq:EL-L}\frac{d}{dt}\frac{\partial}{\partial \dot{q}^{\alpha}}\left(L + \sum \lambda_I f_I\right) - \frac{\partial}{\partial q^{\alpha}}\left(L + \sum \lambda_I f_I\right) = 0
+\end{gather}
+
+Donde $\lambda_I(t) = \alpha_I\mu_I(t)$, son conocidos como \textit{Multiplicadores de Lagrange}. Este es el resultado de aplicar el principio variacional con ligaduras, donde se obtienen un conjunto de ecuaciones que lucen similar a las ecuaciones de Euler-Lagrange bajo la Lagrangiana
+
+\begin{gather*}
+    \mathcal{L} = L + \sum \lambda_i f_I
+\end{gather*}
+
+Ahora se tienen $n$ ecuaciones de Euler-Lagrange representadas por (\ref*{eq:EL-L}), y $K$  ecuaciones de ligadura dadas por (\ref*{eq:Lig}), para poder encontrar $n + K$ funciones $q^{\alpha}$ y $\lambda_I(t)$. Ahora si se trabajan con ligaduras holonomas, entonces la ecuación (\ref*{eq:EL-L}) se puede expresar como
+
+\begin{gather*}
+    \frac{d}{dt}\frac{\partial L}{\partial \dot{q}^{\alpha}} - \frac{\partial}{\partial q^{\alpha}}\left(L + \sum \lambda_I f_I\right) = 0\\
+    \frac{d}{dt}\frac{\partial L}{\partial \dot{q}^{\alpha}} - \frac{\partial L}{\partial q^{\alpha}} - \sum \lambda_I\frac{\partial f_i}{\partial q^{\alpha}}= 0
+\end{gather*}
+
+Esto se realiza con el objetivo de que las ecuaciones de movimiento no involucren derivadas temporales para $\lambda$ esto debido a que se necesitarían condiciones iniciales sobre las fuerzas de ligadura y esto no tendría sentido físico.
+
+\subsection[short]{Ejemplo}
+
+
+%\subsection[short]{Espacio de Fase $\mathbf{T}\mathbb{Q}$}
+
+
+%Retomando las ecuaciones de Euler-Lagrange en la forma de Eq.(\ref*{eq:vEL}) y estableciendo de forma explicita la ecuación diferencial.
+
+%\begin{gather}
+%    \frac{\partial^2 L}{\partial \dot{q}^{\beta} \partial \dot{q}^{\alpha}}\ddot{q}^{\beta} + \frac{\partial^2 L}{\partial q^\beta \partial \dot{q}^{\alpha}}\dot{q}^{\beta} + \frac{\partial^2 L}{\partial t\partial \dot{q}^{\alpha}} - \frac{\partial L}{\partial q^{\alpha}} = 0
+%\end{gather}
+
+%Este es un sistema de ecuaciones diferenciales de segundo orden que se encuentran dentro del espacio de configuraciones $\mathbb{Q}$, pero también se pueden interpretar dentro del espacio tangencial a este, es decir, el espacio de de fase $\mathbf{T}\mathbb{Q}$.
