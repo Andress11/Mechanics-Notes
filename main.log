@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.9.14)  17 OCT 2024 21:52
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.9.14)  19 OCT 2024 23:29
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -589,40 +589,76 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 7.
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
 
-] [2] [3] [4]
-Overfull \hbox (0.96117pt too wide) in paragraph at lines 159--160
-[]\OT1/cmr/m/n/12 Desarrollando el t^^Sermino de la derecha, asum-iendo que las fuerzas con con-ser-va-ti-vas, en-tonces 
+] [2]
+Overfull \hbox (2.80888pt too wide) in paragraph at lines 98--100
+\OT1/cmr/m/n/12 al igual que antes las lig-aduras no de-ter-mi-nan com-ple-ta-mente $\OML/cmm/m/it/12 C[]$\OT1/cmr/m/n/12 , en-tonces asum-i-mos la condici^^Son
  []
 
-[5]) [6] (./ch/Fuerzas_Centrales.tex [7]
-Overfull \hbox (19.07108pt too wide) in paragraph at lines 50--52
-\OT1/cmr/m/n/12 La ecuaci^^Son (8[]) de-fine una \OT1/cmr/m/it/12 co-or-de-nada c^^S^^Pclica\OT1/cmr/m/n/12 , la cual per-mite de-sacoplar las ecua-ciones difer-en-ciales. 
+
+Overfull \hbox (3.57225pt too wide) in paragraph at lines 108--110
+\OT1/cmr/m/n/12 Entonces nue-va-mente las lig-aduras re-alizar^^San tra-bajo solo si de-pen-den expl^^S^^Pcitamente del tiempo.
  []
 
-[8] [9]) [10] (./ch/Variational.tex
+[3] [4] [5] [6]
+Overfull \hbox (2.69308pt too wide) in paragraph at lines 266--269
+\OT1/cmr/m/n/12 par-tic-u-lar, por el con-trario, se es-tableci^^So un sis-tema de co-or-de-nadas gen-er-al-izadas que pertenecen
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 266--269
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 266--269
+
+ []
+
+
+Overfull \hbox (4.0639pt too wide) in paragraph at lines 266--269
+\OT1/cmr/m/n/12 ahon-dar un poco m^^Sas en esta propiedad suponga un nuevo con-junto de co-or-de-nadas gen-er-al-izadas
+ []
+
+[7]
+Underfull \hbox (badness 10000) in paragraph at lines 272--275
+
+ []
+
+[8]) [9] (./ch/Fuerzas_Centrales.tex [10] [11] [12]) [13] (./ch/Variational.tex
 Overfull \hbox (9.6259pt too wide) in paragraph at lines 1--2
 \OT1/cmr/m/n/12 punto varia-cional. De to-dos las posi-bles trayec-to-rias de-scritas por las fun-ciones $\OML/cmm/m/it/12 q\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 t\OT1/cmr/m/n/12 )$, el movimiento
  []
 
-[11] [12] [13] [14]) [15] (./ch/Symmetry.tex) 
+[14] [15] [16] [17]) [18] (./ch/Symmetry.tex [19]
+<imgs/tps.png, id=208, 474.27188pt x 191.21437pt>
+File: imgs/tps.png Graphic file (type png)
+<use imgs/tps.png>
+Package pdftex.def Info: imgs/tps.png  used on input line 44.
+(pdftex.def)             Requested size: 474.27072pt x 191.2139pt.
+ [20 <./imgs/tps.png>]
+Overfull \hbox (0.23897pt too wide) in paragraph at lines 90--92
+\OT1/cmr/m/n/12 El primer t^^Sermino de esta ecuaci^^Son ya es cero, de-bido a que son las ecua-ciones de Euler-Lagrange,
+ []
+
+[21]) 
 AED: lastpage setting LastPage
-[16] (./main.aux)
+[22] (./main.aux)
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 5321D22EABCBACDB6B61A8AB5A5A03C5;1279.
+(rerunfilecheck)             Checksum: 36813A61A9CCFFC194401516D5CD8E0D;1694.
  ) 
 Here is how much of TeX's memory you used:
- 14900 strings out of 480247
- 239566 string characters out of 5896106
- 578490 words of memory out of 5000000
- 32567 multiletter control sequences out of 15000+600000
+ 14951 strings out of 480247
+ 240224 string characters out of 5896106
+ 577490 words of memory out of 5000000
+ 32593 multiletter control sequences out of 15000+600000
  477742 words of font info for 58 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 68i,13n,76p,800b,460s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on main.pdf (16 pages, 183966 bytes).
+ 68i,13n,76p,860b,462s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on main.pdf (22 pages, 225322 bytes).
 PDF statistics:
- 233 PDF objects out of 1000 (max. 8388607)
- 189 compressed objects within 2 object streams
- 55 named destinations out of 1000 (max. 500000)
- 121 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 302 PDF objects out of 1000 (max. 8388607)
+ 247 compressed objects within 3 object streams
+ 77 named destinations out of 1000 (max. 500000)
+ 166 words of extra memory for PDF output out of 10000 (max. 10000000)
 

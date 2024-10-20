@@ -11,7 +11,6 @@
             \begin{equation*}
                 f_I (\mathbf{x_1}, \dots, \mathbf{x}_N,\mathbf{\dot{x}_1}, \dots, \mathbf{\dot{x}_N},t) = 0 \;\;\;\; \text{con} \;\;\;\; I = 1, \dots K < 3N \;\;\;\;\text{No Holonomas}
             \end{equation*}
-
             Para este caso trabajaremos con las ligaduras holonomas, y por tanto, podemos escribir entonces la ligadura como
 
             \begin{equation*}
@@ -25,7 +24,6 @@
             \begin{equation*}
                 m\ddot{\mathbf{x}} = \mathbf{F} + \mathbf{C}
             \end{equation*}
-
             Donde $\mathbf{C}$ denota las fuerzas de ligadura y $\mathbf{F}$ las fuerzas externas que se aplican sobre el sistema. Para este problema entonces tendremos 6 incógnitas ($\mathbf{x}$ y $\mathbf{C}$ para cada coordenada del espacio), pero tan solo contamos con 4 ecuaciones por lo que este sistema no tendrá solución. Por otro lado, las fuerzas de ligadura tienen que ser perpendiculares a la superficie de ligadura para que estas no realicen trabajo, y así no puedan aportar a los cambios de energía del sistema, esto permite escribir las fuerza de ligadura como
 
             \begin{equation*}
@@ -39,20 +37,17 @@
             \begin{equation*}
                 m\ddot{\mathbf{x}} = -\nabla V + \lambda\nabla f
             \end{equation*}
-
             Aplicando producto punto de $\dot{\mathbf{x}}$ ambos lados de la ecuación
 
             \begin{equation*}
                 m\ddot{\mathbf{x}}\cdot \dot{\mathbf{x}} = -\nabla V \cdot \dot{\mathbf{x}}+ \lambda\nabla f \cdot \dot{\mathbf{x}}
             \end{equation*}
-
             Recordando la definición de derivada total respecto al tiempo sobre una función de varias variables 
 
             \begin{gather*}
                 \frac{df}{dt} = \nabla f \cdot \dot{\mathbf{x}} + \frac{\partial f}{\partial t}\\
                 \frac{dV}{dt} = \nabla V \cdot \dot{\mathbf{x}} + \frac{\partial V}{\partial t}
             \end{gather*}
-
             Ahora como sobre la superficie de ligadura $f(\mathbf{x},t) = 0$ entonces $\frac{df}{dt} = 0$, esto permite escribir las anteriores expresiones como 
 
             \begin{gather*}
@@ -67,7 +62,6 @@
                 \frac{d}{dt}\left(\frac{1}{2}m\dot{x}^2 + V \right) =    \frac{\partial V}{\partial t} - \lambda\frac{\partial f}{\partial t}\\
                 \frac{dE}{dt} =    \frac{\partial V}{\partial t} - \lambda\frac{\partial f}{\partial t}\\
             \end{gather*}
-
             Esto significa que la energía de un sistema puede cambiar si $V$ o $f$ son funciones explicitas del tiempo o si la superficie de ligadura se esta moviendo. Esto puede ser un poco más claro en el sentido que si la superficie de ligadura cambia entones no siempre se respetar que $\mathbf{C}\cdot \mathbf{\dot{x}} = 0$. Por lo tanto, para este caso se consideran superficies de ligadura que no dependan explícitamente del tiempo (superficies \textit{suaves}).
     \end{enumerate}
 
@@ -87,38 +81,32 @@
         m\ddot{\mathbf{x}} - \mathbf{F} =  \lambda \nabla f\\
         (m\ddot{\mathbf{x}} - \mathbf{F}) \cdot {\tau} =  \lambda \nabla f \cdot \tau \\
     \end{gather*}
-
     Donde $\tau$ es el vector tangente arbitrario que tiene que cumplir que $\tau \cdot \nabla f = 0$, por tanto, la ecuación de movimiento se reduce  
 
     \begin{equation*}
         (m\ddot{\mathbf{x}} - \mathbf{F}) \cdot {\tau} = 0
     \end{equation*}
-
     Dado que $\tau$ es un vector sobre el plano tangente a la superficie se puede expresar como una combinación lineal de dos bases ortogonales, por lo que en realidad esta última ecuación en realidad serán dos ecuaciones, pero entonces si queremos encontrar la función vectorial $\mathbf{x}(t)$ serán necesarias tres ecuaciones. La tercera ecuación será entonces la ecuación de ligadura $f(\mathbf{x},t) = 0$.    Ahora si generalizamos a un sistema de $N$ partículas con $K$ ligaduras holonomas independientes, por tanto escribimos la segunda ley de Newton como
 
     \begin{equation*}
         m_i \ddot{\mathbf{x}_i} = \mathbf{F}_i + \mathbf{C}_i
     \end{equation*}
-    
     y la ligadura está dada por
 
     \begin{equation*}
         f_i (\mathbf{x_1}, \dots, \mathbf{x_N},t) = 0 \;\;\;\; \text{con} \;\;\;\; I = 1, \dots K < 3N
     \end{equation*}
-
     al igual que antes las ligaduras no determinan completamente $C_i$, entonces asumimos la condición de suavidad sobre la superficie de ligadura 
 
     \begin{equation*}
         C_i = \sum_{i = 1}^{k} \lambda_i \nabla_i f_i
     \end{equation*}
-
     donde $\nabla_i$ es el gradiente con respecto al vector posición $\mathbf{x}_i$ y $\lambda_i(t)$ son $K$ funciones las cuales son desconocidas. Si el potencial $V$ cumple que $\partial V/\partial t = 0$ entonces,
 
     \begin{equation*}
         \frac{dE}{dt} = - \sum_i \lambda_i \frac{\partial f_i}{\partial t}
     \end{equation*}
-
-    entonces nuevamente las ligaduras realizarán trabajo solo si dependen explicitamente del tiempo. Ahora tendremos que $\tau_i$  serán $N$ vectores arbritarios tangentes a la superficie y cumplen la condición
+    Entonces nuevamente las ligaduras realizarán trabajo solo si dependen explícitamente del tiempo. Ahora tendremos que $\tau_i$  serán $N$ vectores arbitrarios tangentes a la superficie y cumplen la condición
 
     \begin{equation*}
         \sum_{i = 1}^{N}\tau_i \cdot \nabla_i f_i = 0 \;\;\;\; \text{con} I = 1, \dots, K 
@@ -129,7 +117,6 @@
         \sum_i (m_i\ddot{\mathbf{x}}_i - \mathbf{F}_i) \cdot \tau = 0
         \label{eq:dalmbert}
     \end{equation}
-
     La Eq.(\ref*{eq:dalmbert}) es conocida como el \textit{Principio de D'Alembert}. Con esta ecuación podemos determinar las $3N-K$ ecuaciones independientes para solucionar un problema. Por otro lado, la ecuación de ligadura provee la última relación necesaria para describir el movimiento de las $3N$ componentes de $\mathbf{x}_i$.
 
     \textit{TERMINAR LAS COORDENADAS GENERALIZADAS}
@@ -142,26 +129,22 @@
     \begin{equation*}
         \tau_i = \epsilon^{\alpha} \frac{\partial \mathbf{x}_i}{\partial q^{\alpha}}
     \end{equation*}
-
 Esta ecuación, expresa que los vectores tangenciales serán una combinación lineal entre las bases coordenada ($\partial \mathbf{x}_i / \partial q^{\alpha}$) y los respectivos coeficientes ($\epsilon^{\alpha}$). Esta ecuación también indica que el punto tangencia sobre $\mathbb{Q}$ para cada $\tau_i$ está dado en términos de $q^{\alpha}$. Remplazando en el principio de D'Alembert.
 
     \begin{gather*}
         \sum_i (m_i\ddot{\mathbf{x}}_i - \mathbf{F}_i) \cdot \epsilon^{\alpha} \frac{\partial \mathbf{x}_i}{\partial q^{\alpha}} = 0
     \end{gather*}
-
     Como los valores de $\epsilon^{\alpha}$ son arbitrarios, entones para cada set de ecuaciones se tomara el valor correspondiente como diferente de cero y el resto de valores como cero (es decir, para un sistema de ecuaciones $\epsilon^{\alpha}$ será una matriz unitaria).
 
     \begin{gather*}
         \sum_i (m_i\ddot{\mathbf{x}}_i - \mathbf{F}_i) \cdot  \frac{\partial \mathbf{x}_i}{\partial q^{\alpha}} = 0 \;\;\; \text{con} \;\;\; \alpha = 1, \dots, n\\
         \sum_i \left(m_i\ddot{\mathbf{x}}_i\cdot  \frac{\partial \mathbf{x}_i}{\partial q^{\alpha}} - \mathbf{F}_i \cdot  \frac{\partial \mathbf{x}_i}{\partial q^{\alpha}}\right)  = 0
     \end{gather*}
-
     Desarrollando el término de la derecha, asumiendo que las fuerzas con conservativas, entonces 
 
     \begin{gather*}
         \sum_i \mathbf{F}_i \cdot  \frac{\partial \mathbf{x}_i}{\partial q^{\alpha}} =  - \sum_i \nabla_i V\cdot  \frac{\partial \mathbf{x}_i} ={\partial q^{\alpha}} = - \frac{\partial V}{\partial q^{\alpha}}
     \end{gather*}
-
     Ahora, para el termino en la izquierda puede ser visto en términos de la derivada de un producto, expresado de la siguiente forma
 
     \begin{gather*}
@@ -170,41 +153,34 @@ Esta ecuación, expresa que los vectores tangenciales serán una combinación li
     \begin{gather*}
         \sum_i m_i\ddot{\mathbf{x}}_i\cdot  \frac{\partial \mathbf{x}_i} {\partial q^{\alpha}} = \frac{d}{dt}\left[\mathbf{\dot{x}_i} \cdot  \frac{\partial \mathbf{x_i}}{\partial q^{\alpha}}\right] - \mathbf{\dot{x}_i} \cdot \frac{d}{dt}\frac{\partial \mathbf{x}_i}{\partial q^{\alpha}}
     \end{gather*}
-
-
 Ahora como $\mathbf{\dot{x}}$ es una función de de $q^{\alpha}$ y $t$, entonces la derivada total se expresa como 
 
 \begin{gather*}
     \mathbf{\dot{x}} = \frac{\partial \mathbf{x}}{\partial q^{\alpha}}\dot{q}^{\alpha} + \frac{\partial \mathbf{x}}{\partial t}
 \end{gather*}
-
 Si se deriva parcialmente respecto a $\dot{q}^{\alpha}$
 
-\begin{gather*}
-    \frac{\partial \mathbf{\dot{x}}}{\partial \dot{q}^{\alpha}} = \frac{\partial}{\partial \dot{q}^{\alpha}}\frac{\partial \mathbf{x}}{\partial q^{\alpha}}\dot{q}^{\alpha} + \frac{\partial}{\partial \dot{q}^{\alpha}}\frac{\partial \mathbf{x}}{\partial t}\\
-    \frac{\partial \mathbf{\dot{x}}}{\partial \dot{q}^{\alpha}} = \frac{\partial \mathbf{x}}{\partial q^{\alpha}}\frac{\dot{q}^{\alpha}}{\dot{q}^{\alpha}} = \frac{\partial \mathbf{x}}{\partial q^{\alpha}}
-\end{gather*}
-
-Remplazando para en la expresión de la aceleración 
+\begin{gather}
+    \frac{\partial \mathbf{\dot{x}}}{\partial \dot{q}^{\alpha}} = \frac{\partial}{\partial \dot{q}^{\alpha}}\frac{\partial \mathbf{x}}{\partial q^{\alpha}}\dot{q}^{\alpha} + \frac{\partial}{\partial \dot{q}^{\alpha}}\frac{\partial \mathbf{x}}{\partial t} \\
+    \label{eq:suppunt}\frac{\partial \mathbf{\dot{x}}}{\partial \dot{q}^{\alpha}} = \frac{\partial \mathbf{x}}{\partial q^{\alpha}}\frac{\dot{q}^{\alpha}}{\dot{q}^{\alpha}} = \frac{\partial \mathbf{x}}{\partial q^{\alpha}} 
+\end{gather}
+La Eq.\ref*{eq:suppunt} se conoce como la supresión de puntos. Remplazando para en la expresión de la aceleración 
     
 \begin{gather*}
     \sum_i m_i\ddot{\mathbf{x}}_i\cdot  \frac{\partial \mathbf{x}_i} {\partial q^{\alpha}} = \sum_i\frac{d}{dt}\left[m_i\mathbf{\dot{x}_i} \cdot  \frac{\partial \mathbf{\dot{x}_i}}{\partial \dot{q}^{\alpha}}\right] - \sum_im_i\mathbf{\dot{x}_i} \cdot \frac{\partial \mathbf{\dot{x}}_i}{\partial q^{\alpha}}\\ 
     \sum_i m_i\ddot{\mathbf{x}}_i\cdot  \frac{\partial \mathbf{x}_i} {\partial q^{\alpha}} = \sum_i\frac{d}{dt}\left[m_i\mathbf{v_i} \cdot  \frac{\partial \mathbf{v_i}}{\partial \dot{q}^{\alpha}}\right] - \sum_im_i\mathbf{v_i} \cdot \frac{\partial \mathbf{v}_i}{\partial q^{\alpha}}\\
     \sum_i m_i\ddot{\mathbf{x}}_i\cdot  \frac{\partial \mathbf{x}_i} {\partial q^{\alpha}} = \frac{d}{dt}  \frac{\partial T}{\partial \dot{q}^{\alpha}} -\frac{\partial T}{\partial q^{\alpha}}
 \end{gather*}
-
 Remplazando estos términos en el principio de D'Alembert se obtiene 
 
 \begin{gather*}
     \frac{d}{dt}  \frac{\partial T}{\partial \dot{q}^{\alpha}} -\frac{\partial T}{\partial q^{\alpha}} + \frac{\partial V}{\partial q^{\alpha}}  = 0
 \end{gather*}
-
 Ahora, se define una función $L$ llamada Lagrangiana, el cual esta dado por $L = T - V$
 
 \begin{gather*}
     \frac{d}{dt}  \frac{\partial T}{\partial \dot{q}^{\alpha}} -\frac{\partial L}{\partial q^{\alpha}} = 0
 \end{gather*}
-
 Si se tienen potenciales independientes de la velocidad, entonces se definen las ecuaciones de Euler-Lagrange como 
 
 \begin{gather*}
@@ -212,3 +188,128 @@ Si se tienen potenciales independientes de la velocidad, entonces se definen las
 \end{gather*}
 
 \subsection{Ejemplo}
+
+\subsection[short]{Transformación sobre funciones Lagrangianas}
+
+Aunque la función Lagrangiana determina las ecuaciones de movimiento únicas, las ecuaci-\newline ones de movimiento no determina una función Lagrangiana única. Es decir, dos funciones Lagrangianas diferentes pueden conducir a una misma ecuación de movimiento. Considerando dos funciones $\Lambda_{j\alpha}$, donde $j = 1, 2$ y $\alpha = 1, \dots, n$, que están dadas por
+
+\begin{gather*}
+    \frac{d}{dt}\frac{\partial L_j}{\partial \dot{q}^{\alpha}} - \frac{\partial L_j}{\partial q^{\alpha}} = \Lambda_{j\alpha}
+\end{gather*}
+Entonces para decir que las ecuaciones de movimiento son exactamente iguales entonces se tiene que cumplir 
+
+\begin{gather*}
+    \Lambda_{1\alpha} = \Lambda_{2\alpha}
+\end{gather*}
+Para cada $\alpha$. Tomando un solo grado de libertad y escribiendo $\psi = L_1 - L_2$ se obtiene que
+
+\begin{gather*}
+    \frac{d}{dt}\frac{\partial \psi}{\partial \dot{q}} - \frac{\partial \psi}{\partial q} = 0
+\end{gather*}
+\begin{gather}
+    \label{eq:L1}\frac{\partial ^2\psi}{\partial \dot{q}^2}\ddot{q} + \frac{\partial ^2 \psi}{\partial q\partial \dot{q}}\dot{q} + \frac{\partial ^2 \psi}{\partial t\partial \dot{q}} - \frac{\partial \psi}{\partial q} = 0
+\end{gather}
+Como $L_1$ y $L_2$ son funciones solo de $q$,$\dot{q}$ y $t$, entonces $\psi$ también. El primer término de la ecuación es el único que depende de $\ddot{q}$, entonces este término debe ser cero (porque no hay otro término que pueda dar lugar a $\ddot{q}$), esto significa que $\partial^2 \psi /\partial \dot{q}^2 = 0$ y por tanto, esto significa que $\psi$ debe ser lineal in $\dot{q}$. Definiendo entonces una función $\psi$ tal que
+\begin{gather*}
+    \psi  = \dot{q}F(q,t) + G(q,t)
+\end{gather*}
+Entonces Eq.\ref*{eq:L1} se puede expresar como 
+
+\begin{gather*}
+    \frac{\partial ^2 \psi}{\partial q\partial \dot{q}}\dot{q} + \frac{\partial ^2 \psi}{\partial t\partial \dot{q}} - \frac{\partial \psi}{\partial q} = 0
+\end{gather*}
+Expandiendo el primer termino 
+
+\begin{gather*}
+    \frac{\partial^2 \psi}{\partial q\partial \dot{q}}\dot{q} =     \frac{\partial}{\partial \dot{q}}\left(\frac{\partial }{\partial q}(\dot{q}F + G)\right)\dot{q}\\
+    \frac{\partial^2 \psi}{\partial q\partial \dot{q}}\dot{q} =     \frac{\partial}{\partial \dot{q}}\left(\dot{q}\frac{\partial F}{\partial q} + \frac{\partial G}{\partial q}\right)\dot{q} = \frac{\partial F}{\partial q}\dot{q}
+\end{gather*}
+Ahora, el segundo termino será
+
+\begin{gather*}
+    \frac{\partial ^2 \psi}{\partial t\partial \dot{q}} =      \frac{\partial}{\partial t}\left(\frac{\partial }{\partial \dot{q}}(\dot{q}F + G)\right)\\
+    \frac{\partial ^2 \psi}{\partial t\partial \dot{q}} =      \frac{\partial}{\partial t}\left(\frac{\partial \dot{q}}{\partial \dot{q}}F + \frac{\partial G}{\partial \dot{q}}\right) =  \frac{\partial F}{\partial t} 
+\end{gather*}
+Finalmente, el tercer término es 
+
+\begin{gather*}
+    \frac{\partial \psi}{\partial q} = \frac{\partial }{\partial q}(\dot{q}F + G)\\
+    \frac{\partial \psi}{\partial q} = \dot{q}\frac{\partial F}{\partial q} + \frac{\partial G}{\partial q}
+\end{gather*}
+Remplazando se obtiene que 
+
+\begin{gather*}
+    \frac{\partial F}{\partial q}\dot{q} + \frac{\partial F}{\partial t} -\dot{q}\frac{\partial F}{\partial q} + \frac{\partial G}{\partial q} = 0\\
+    \frac{\partial F}{\partial t} + \frac{\partial G}{\partial q} = 0
+\end{gather*}
+Esta es la condición de integración para que exista una función $\Phi(q,t)$ que permita expresar $\psi$ como un diferencial exacto de la función $\Phi$.
+
+\begin{align*}
+    F = \frac{\partial \Phi}{\partial q} &&G = \frac{\partial \Phi}{\partial t} 
+\end{align*}
+Entonces, expresando $\psi$ en términos de $\Psi$.
+
+\begin{gather*}
+    \psi = \frac{\partial \Phi}{\partial q}\dot{q} + \frac{\partial \Phi}{\partial t} = \frac{d\Phi}{dt}
+\end{gather*}
+
+Esto implica que la diferencia entre Lagrangianos es
+
+\begin{gather}
+    \label{eq:difl}L_1 - L_2 = \frac{d\Phi}{dt}
+\end{gather}
+
+
+\subsection[short]{Independencia de Coordenadas}
+
+
+Las ecuaciones de Lagrange se derivaron sin especificar un sistema de coordenadas en particular, por el contrario, se estableció un sistema de coordenadas generalizadas que pertenecen a $\mathbb{Q}$. De esta forma las ecuaciones son validas para cualquier sistema coordenado. \newline
+\\\newline
+Este hecho implica una de las propiedades más importantes del la función Lagrangiana. Para ahondar un poco más en esta propiedad suponga un nuevo conjunto de coordenadas generalizadas dadas por $q^{\prime\alpha}(q,t)$, donde las funciones sus funciones son invertibles y están dadas por $q^{\alpha}(q^{\prime}, t)$, esto significa que es posible describir las trayectorias del sistema en términos de $q^{\alpha}$ o $q^{\prime\alpha}$. Y cuando se determina $q^{\alpha}(q^{\prime},t)$  entonces $\dot{q}^{\alpha}(q^{\prime},\dot{q}^{\prime},t)$ serán
+
+\begin{gather*}
+    \dot{q}^{\alpha} = \frac{\partial q^{\alpha}}{\partial q^{\prime \beta}}\dot{q}^{\prime \beta} + \frac{\partial q^{\alpha}}{\partial t}
+\end{gather*}
+La Lagrangiana es una función de $2n + 1$ variables (donde $n$ es número de coordenadas generalizadas). $L$ asigna un valor a cada conjunto de $2n + 1$ variables, donde la dinámica del sistema está contenida en cada conjunto de variables dadas. En otras palabras, la función Lagrangiana no asigna un valor a cada conjunto de valores $2n + 1$, sino que este valor lo asigna a cada estado físico contenido en este conjunto. Esto implica que bajo una transformación de coordenadas la función $L$ debe asignar el mismo valor real debido a que el estado del sistema no cambia.\newline\\
+Para demostrar matemáticamente este hecho, suponga una función $L(q,\dot{q},t)$ la cual puede ser escrita en términos de una transformación.
+
+\begin{gather*}
+    L(q,\dot{q},t) = L(q(q^{\prime},t),\dot{q}(q^{\prime},\dot{q}^{\prime},t)) = L^{\prime}(q^{\prime},\dot{q}^{\prime},t)
+\end{gather*}
+Donde $L^{\prime}$ denota la Lagrangiana transformada, expresando las ecuaciones de movimiento sobre este sistema se obtiene
+
+\begin{gather*}
+    \frac{d}{dt}\frac{\partial L^{\prime}}{\partial \dot{q}^{\alpha}} - \frac{\partial L^{\prime}}{\partial q^{\alpha}} = 0\\
+    \frac{d}{dt}\left[\frac{\partial L}{\partial \dot{q^{\alpha}}}\frac{\partial \dot{q}^{\alpha}}{\partial \dot{q}^{\prime\alpha}}\right] - \left[\frac{\partial L}{\partial q^{\alpha}}\frac{\partial q^{\alpha}}{\partial q^{\prime\alpha}} + \frac{\partial L}{\partial \dot{q}^{\alpha}}\frac{\partial \dot{q}^{\alpha}}{\partial q^{\prime\alpha}}\right] = 0
+\end{gather*}
+Realizando explícitamente la derivada $\partial \dot{q}^{\alpha}/\partial q^{\prime\alpha}$ se obtiene una propiedad muy interesante debido a que las derivadas son continuas
+
+\begin{gather}
+    \label{eq:prop}\frac{\partial \dot{q}^{\alpha}}{\partial q^{\prime\alpha}} = \frac{\partial^2q^{\alpha}}{\partial q^{\prime\alpha}\partial q^{\prime \beta}}\dot{q}^{\prime \beta} + \frac{\partial^2 q^{\alpha}}{\partial q^{\prime\alpha}\partial t} = \frac{d}{dt}\frac{\partial q^{\alpha}}{\partial q^{\prime\alpha}}
+\end{gather}
+Utilizando esta propiedad y la supresión de puntos (Eq.\ref*{eq:suppunt}) se puede re-expresar las ecuaciones de movimiento.
+
+\begin{gather*}
+    \frac{d}{dt}\left[\frac{\partial L}{\partial \dot{q^{\alpha}}}\frac{\partial q^{\alpha}}{\partial q^{\prime\alpha}}\right] - \left[\frac{\partial L}{\partial q^{\alpha}}\frac{\partial q^{\alpha}}{\partial q^{\prime\alpha}} + \frac{\partial L}{\partial \dot{q}^{\alpha}}\frac{d}{dt}\frac{\partial q^{\alpha}}{\partial q^{\prime\alpha}}\right] = 0
+\end{gather*}
+Desarrollando el primer término como la derivada de un producto
+
+\begin{gather*}
+    \frac{\partial q^{\alpha}}{\partial q^{\prime\alpha}}\frac{d}{dt}\frac{\partial L}{\partial \dot{q^{\alpha}}} + \frac{\partial L}{\partial \dot{q^{\alpha}}}\frac{d}{dt}\frac{\partial q^{\alpha}}{\partial q^{\prime\alpha}} - \frac{\partial L}{\partial q^{\alpha}}\frac{\partial q^{\alpha}}{\partial q^{\prime\alpha}} - \frac{\partial L}{\partial \dot{q}^{\alpha}}\frac{d}{dt}\frac{\partial q^{\alpha}}{\partial q^{\prime\alpha}} = 0
+\end{gather*}
+Eliminando términos semejantes y factorizando la expresión se obtiene finalmente 
+
+\begin{gather*}
+    \left[\frac{d}{dt}\frac{\partial L}{\partial \dot{q^{\alpha}}} - \frac{\partial L}{\partial q^{\alpha}}\right]\frac{\partial q^{\alpha}}{\partial q^{\prime\alpha}} = 0
+\end{gather*}
+
+Debido a que $\partial q^{\alpha} /\partial q^{\prime\alpha} \neq 0$ entonces implica
+
+\begin{gather}
+    \label{eq:lcova}\frac{d}{dt}\frac{\partial L^{\prime}}{\partial \dot{q^{\alpha}}} - \frac{\partial L^{\prime}}{\partial q^{\alpha}} = \frac{d}{dt}\frac{\partial L}{\partial \dot{q^{\alpha}}} - \frac{\partial L}{\partial q^{\alpha}} = 0
+\end{gather}
+
+La Eq.\ref*{eq:lcova} demuestra que la función Lagrangiana es independiente a las coordenadas, en otras palabras, $L$ es \textit{covariante} bajo transformación de coordenadas.
+
+\subsection[short]{Conservación de la energía}
+

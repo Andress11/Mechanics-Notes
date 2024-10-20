@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1729223549 "/home/andres/Documentos/Maestria/S1/Mecánica/Apuntes/main.tex" "main.pdf" "main" 1729223551
+["pdflatex"] 1729402188 "/home/andres/Documentos/Maestria/S1/Mecánica/Apuntes/main.tex" "main.pdf" "main" 1729402190
   "/etc/texmf/web2c/texmf.cnf" 1726352890 475 c0e671620eb5563b2130f56340a5fde8 ""
   "/home/andres/.texlive2021/texmf-var/web2c/pdftex/pdflatex.fmt" 1726356243 1405755 abd7eb9074819df37276bbcfc20eaadc ""
   "/home/andres/Documentos/Maestria/S1/Mecánica/Apuntes/main.tex" 1729222456 1945 e335567407540e629cc712fb5628d0ee ""
@@ -38,6 +38,7 @@
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb" 1248133631 32734 69e00a6b65cedb993666e42eedb3d48f ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb" 1248133631 32726 0a1aea6fcd6468ee2cf64d891f5c43c8 ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb" 1248133631 32569 5e5ddc8df908dea60932f3c484a54c0d ""
+  "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb" 1248133631 32626 4f5c1b83753b1dd3a97d1b399a005b4b ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb" 1248133631 36118 fad905eba93cff5bce1e185fe980a177 ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb" 1248133631 34694 ad62b13721ee8eda1dcc8993c8bd7041 ""
   "/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii" 1461363279 71627 94eb9990bed73c364d7f53f960cc8c5b ""
@@ -122,11 +123,12 @@
   "/usr/share/texmf/web2c/texmf.cnf" 1644012257 39432 7155514e09a3d69036fac785183a21c2 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1726366788 4379155 98693266ff65f58d9f98aff394de12d2 ""
   "ch/Fuerzas_Centrales.tex" 1729183253 8228 cdb57e2745a11e63b267f9886b9d68d0 ""
-  "ch/Lagrange.tex" 1728101354 14232 a8804edb7f24bc2f44805f37c59b6522 ""
-  "ch/Symmetry.tex" 1729223549 1990 c7253c7347866c37676fa4a927ff7161 ""
+  "ch/Lagrange.tex" 1729399708 23343 a006f670b0eadd16eefca5202e9c5d2d ""
+  "ch/Symmetry.tex" 1729402186 10312 e596d1aaf76879bfc941f46d10e60d97 ""
   "ch/Variational.tex" 1729220085 14302 c34bec429fced206194ad7685dcaa11f ""
-  "main.aux" 1729223550 3219 0c7954eef568644e32fbcc8bb9698913 "pdflatex"
-  "main.out" 1729223550 1279 5321d22eabcbacdb6b61a8ab5a5a03c5 "pdflatex"
+  "imgs/tps.png" 1729384462 14786 55a59b3445b9d6a0046aa1c7f95bb2cf ""
+  "main.aux" 1729402190 4620 02fbf52e85e7fd78f1e2e007903f6626 "pdflatex"
+  "main.out" 1729402190 1694 36813a61a9ccffc194401516d5cd8e0d "pdflatex"
   "main.tex" 1729222456 1945 e335567407540e629cc712fb5628d0ee ""
   (generated)
   "main.aux"
